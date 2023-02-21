@@ -1,0 +1,729 @@
+:root {
+  --bg-color: #fcfcfc;
+}
+
+selector {
+    property: var(--variable-name);
+}
+
+selector {
+  property: var(--variable-name);
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+/* Variables */
+:root {
+  --font-family: "Josefin Sans", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #FFAA72;;
+  --secondary-color: #ff7235;
+  --hover-color: #00bcd4;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --body-font: 'Work Sane', sans-serif;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: top;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%
+}
+div, span, h2, p {
+  font-family: var(--font-family);
+}
+
+p {
+  font-size: 20px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: #2f2626;
+
+}
+
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+.intro-img {
+  height: 37.5rem;
+  width: 37.5rem;
+  border-radius: 70%;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+
+.hero img {
+  height: 45.5rem;
+  width: 45.5rem;
+  border-radius: 12%;
+  padding: 5rem 5rem 5rem 5rem;
+}
+
+/*here it's dealing with the about box, I might remove it*/
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+
+.bio p:first-letter {
+  font-size: 1.5rem;
+}
+
+
+
+/* More about section */
+.more-about {
+  background-color: #ffaa72ac;
+  padding: 5rem 5rem 5rem 5rem;
+}
+
+.more-about-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.more-about-header:hover {
+  transform: scale(2.1);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
+.more-about p::first-letter {
+  font-size: 1.5rem;
+}
+
+
+/* Skills section */
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 3rem 5rem;
+}
+
+.skill-header {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+}
+
+.skill-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #fff;
+  transition: width 0.1s ease-in-out;
+}
+
+.skill-header:hover::after {
+  width: 100%;
+}
+
+.skill-header::before {
+  content: "My Top <Skills/>";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  color: rebeccapurple;
+}
+
+.skill-header:hover::before {
+  opacity: 1;
+  animation: typing 0.5s steps(20) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.skills-wrapper img:hover {
+  padding: .8rem;
+  transform: scale(1.1);
+  transition: .3s;
+}
+.icon {
+  width: 9.875rem;
+  height: 9.25rem;
+}
+/*Here will give a fade effect to each icon we have*/
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+/*Project section*/
+.projects {
+  background-color: #ffaa72ac;
+  margin-top: 6rem;
+  padding: 5rem 5rem;
+  text-align: center;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.projects-title:hover span {
+  animation: typing 3s steps(30, end);
+  }
+  
+  .projects-title:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  animation: line 1s forwards;
+  }
+
+.projects-container {
+  display: flex;
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.project-card {
+  width: 850%;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.project-pic {
+  width: 250px;
+  height: 150px; 
+  object-fit: cover;
+  margin-bottom: 25px;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+  padding: 1rem;
+  margin: 0;
+  background-color: #2f2626;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem; 
+  border-radius: 4px;
+}
+
+.project-details {
+  display: flex;
+  margin-bottom: var(--bottom-margin);
+  padding: 1rem;
+  margin: 0;
+  height: 335px;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+.project-link {
+  display: block;
+  padding: 1rem;
+  margin: 0;
+  background-color: #ddd;
+  text-align: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-top: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+  }
+  
+  .project-link:hover {
+    background-color: #ddd;
+    color: var(--primary-color);
+  }
+  
+  .project-link:hover::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(246, 192, 14, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: slide-in 0.5s forwards;
+  }
+  
+  .project-link:hover::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: expand 0.5s forwards;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes line {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes expand {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+
+/* Contact section */
+#contact > .container > .grid.contact_area
+{
+  grid-template-columns: 2fr 3fr;
+}
+
+.contact {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+
+.contact p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+  /*The display flex it's interfering to not make the first-letter more larger that I'm indenting to do on the code below */
+  /* display: flex;
+  justify-content: center; */
+}
+
+.contact p::first-letter {
+  font-size: 1.5rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.contact h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background-color: #7c0f0f;
+  transition: width 0.3s ease-in-out;
+}
+
+.contact h2:hover::after {
+  width: 85%;
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  margin: 0 auto;
+}
+.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: #333;
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+  resize: none;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--secondary-shadow);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.contact_links
+{
+    padding: 2em 0em 1em;
+}
+
+.contact_links a
+{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.25em;
+}
+
+.contact_links i
+{
+    flex: 1;
+    font-size: calc(var(--text-clamp) + 8px);
+    color: var(--secondary-header);
+}
+
+.contact_links span
+{
+    flex: 8;
+    font-family: var(--body-font);
+    font-size: var(--text-clamp);
+    font-weight: 500;
+    color: var(--secondary-header);
+    line-height: 2em;
+}
+
+.contact_links a:hover > span,
+.contact_links a:hover > i
+{
+    color: var(--primary-accent) !important;
+}
+
+
+.input-field {
+  padding-left: 0.5rem;
+}
+.input-field::placeholder {
+  color: var(--secondary-color);
+}
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 2px solid var(--secondary-shadow);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+.submit-btn:hover {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+/* the social section */
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+  padding: 1px;
+}
+
+.socicon {
+  padding: 1px;
+  background-size: 550px;
+  width: 2rem;
+  height: 2rem;
+  border: .5px solid;
+  color: #fff;
+  background-color: #fff;
+  outline: 3.7px solid #fff;
+  border-radius: 70%;
+}
+
+.socials img:hover {
+  padding: 1px;
+  transform: scale(1.3);
+  transition: .3s;
+}
+
+/* footer section */
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+  /* changes reflect on screens with a width of 720px and below */
+
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+    height: 37.5rem;
+    width: 30rem;
+    border-radius: 1rem;
+    max-width: 100%;
+  }
+
+  .bio {
+    margin-top: 3rem;
+    width: 20.5rem;
+    max-width: 100%;
+  }
+
+  .more-about {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .more-about h2 {
+    margin-bottom: 1rem;
+  }
+
+  .more-about p {
+    text-align: justify;
+  }
+
+  .icon {
+    width: 9.875rem;
+    height: 9.25rem;
+    max-width: 100%;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .project-container {
+    width: 20.875rem;
+    max-width: 100%;
+  }
+
+  .contact-form-container {
+    max-width: 23.75rem;
+  }
+
+  @media screen and (max-width: 420px) {
+    .hero img {
+      height: 37.5rem;
+      width: 23rem;
+    }
+
+    .bio {
+      width: 18.3rem;
+    }
+
+    .project-container {
+      width: 17.875rem;
+    }
+
+    .container {
+      width: 37%;
+    }
+
+    .contact-form-container {
+      width: 50%;
+      margin-left: 20px;
+    }
+  }
+}
