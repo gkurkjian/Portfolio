@@ -22,8 +22,9 @@
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav>
+    <!-- Navbar + About -->
+    <header>
+      <nav>
         <h1>GEORGE KURKJIAN</h1>
         <ul class="navigation">
           <li><a href="#about" class="nav-link">About</a></li>
@@ -43,27 +44,34 @@
         <h2 class="bio-title">Hi, I'm George</h2>
         <br/>
         <p class="typed-out">
-          <!-- I'm a Junior Front-end & Back-end developer -->
           For the past three years, I've been creating digital experiences, mastering the art of web development. I'm skilled in writing code, constructing applications, and crafting designs. With my knowledge and dedication, I'm able to make the seemingly impossible, possible.
         </p>
+        <br/>
+        <hr>
+        <br>
+        <div class="resume">
+          <div class="project-link">
+              <a href="/other/Resume-GeorgeKurkjian.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          </div>
+        </div>
       </div>
     </section>
+    </header>
+
 
     <!-- More about -->
     <section class="more-about">
-      <h2 class="more-about-header">&lt;AboutMe/&gt;</h2>
+      <h2 class="more-about-header" class="trigger">&lt;AboutMe/&gt;</h2>
       <br/><br/><br/><br/>
       <p>I am a Junior Web Developer with a passion for creating compelling websites and web applications. I specialize in HTML, JavaScript, CSS, React and Bootstrap, and I strive to create engaging user-friendly experiences.</p>
       <p>My expertise lies in developing code that meets the highest industry standards and ensuring that all projects are completed on time and with the utmost attention to detail.</p>
-
-        <p>I am passionate about learning new technologies and I am constantly striving to find ways to improve my development skills. I enjoy working with a team to create innovative solutions that are both engaging and effective. I am also able to work independently, and I take pride in my ability to think outside the box and come up with creative solutions to challenging problems.</p>
-
-        <p>I have a strong track record of successful project completion and a desire to continue learning and advancing my web development skills. I am eager to take on new challenges and have a strong commitment to producing quality work.</p>
+      <p>I am passionate about learning new technologies and I am constantly striving to find ways to improve my development skills. I enjoy working with a team to create innovative solutions that are both engaging and effective. I am also able to work independently, and I take pride in my ability to think outside the box and come up with creative solutions to challenging problems.</p>
+      <p>I have a strong track record of successful project completion and a desire to continue learning and advancing my web development skills. I am eager to take on new challenges and have a strong commitment to producing quality work.</p>
     </section>
 
     <!-- Skills section -->
     <section class="skills" id="skills">
-      <h2 class="skill-header">My Top &lt;Skills/&gt;</h2>
+      <h2 class="skill-header" class="trigger">My Top &lt;Skills/&gt;</h2>
       <br/><br/><br/><br/>
       <div class="skills-wrapper">
         <h4>Front-end</h4>
@@ -101,7 +109,7 @@
     </section>
 
     <section class="projects" id="projects">
-      <h2 class="projects-title">My &lt;Projects/&gt;</h2>
+      <h2 class="projects-title" class="trigger">My &lt;Projects/&gt;</h2>
       <br/><br/>
       <div class="projects-container">
         <div class="project-container project-card">
@@ -109,9 +117,7 @@
 
           <h3 class="project-title">World Arts Project</h3>
           <p class="project-details">
-            A responsive, web made it from scratch in progress.<br/>
-            Good Front-end and connected to DataBase in case the user<br/>
-            favorites their liked item or remember where was the user stood for in search history.
+            Made in progress, a responsive web with scratch-built front-end that connects to a database for user preferences and search history.
             <br /><br />
             Languages used: Next.js, JavaScript, Bootstrap, MongoDB
           </p>
@@ -122,9 +128,7 @@
           <img src="/img/ScreenshotOfWEB322Project.jpg" alt="netflix-clone" loading="lazy" class="project-pic"/>
           <h3 class="project-title">An Public Blog Web App</h3>
           <p class="project-details">
-            A responsive web made from scratch by using 3 method to store data in phases<br/>
-            For login/registration used MongoDB, for storing uploaded images and accessing them dynamically Cloudinary,
-            for all the activity such as making an a blog with provided category or create a category Elephant.sql.
+            A scratch-built responsive web uses 3 methods to store data: MongoDB for login/registration, Cloudinary for images, and Elephant.sql for activities.
             <br /><br />
             Languages used: JavaScript, HTML, CSS, HBS, MongoDB
           </p>
@@ -152,7 +156,7 @@
         <div class="container" style="width: 37%;">
           <!-- Part 1 code goes here -->
           <div class="contact_info">
-            <h2>Get In Touch With Me</h2>
+            <h2 class="trigger">Get In Touch With Me</h2>
             <br/><br/>
             <p>If you'd like to get in touch with me, please use the form below and I'll be sure to get back to you as soon as possible. 
               Alternatively, you can contact me directly via email, phone, or social media links provided.</p>
