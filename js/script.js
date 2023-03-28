@@ -1,6 +1,6 @@
 // ensuring all page content has loaded (like 'useEffect' hook in React.js)
 document.addEventListener('DOMContentLoaded', (event) => {
-
+console.log("DOMContentLoaded Successfully!")
 // scroll to top functionality
 const scrollUp = document.querySelector("#scroll-up");
 
