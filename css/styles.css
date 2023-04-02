@@ -149,10 +149,10 @@ nav ul li {
   box-shadow: 0px 2px 15px 2px var(--primary-shadow); 
 }
 
-/* DEMO-SPECIFIC STYLES */
+/* Mini-box Title Typing Effect */
 .bio-title {
   margin-bottom: 10px;
-  color: black;
+  color: redblack;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typewriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -305,6 +305,7 @@ nav ul li {
   background-color: #ffaa72ac;
   margin-top: 6rem;
   padding: 5rem 5rem;
+  height: fit-content;
   text-align: center;
 }
 
@@ -333,15 +334,17 @@ nav ul li {
 
 .projects-container {
   display: flex;
-  max-width: 68.75rem;
+  /* max-width: 68.75rem; */
   margin: auto;
   text-align: center;
   margin-top: 2.5rem;
 }
 
 .project-card {
-  width: 850%;
-  height: 100%;
+  display: flex;
+  width: 150%;
+  /* height: 100%; */
+  position: relative;
   margin-bottom: 2rem;
   background-color: #fff;
   flex-direction: column;
@@ -355,7 +358,7 @@ nav ul li {
 
 .project-pic {
   position: relative; /*This will prevent to overlay and not change the size of the pic*/
-  width: 250px;
+  width: 100%;
   height: 150px; 
   object-fit: cover;
   margin-bottom: 25px;
@@ -377,7 +380,7 @@ nav ul li {
   margin-bottom: var(--bottom-margin);
   padding: 1rem;
   margin: 0;
-  height: 285px;
+  /* height: 285px; */
   line-height: 1.2;
   overflow: hidden;
 }
@@ -394,6 +397,7 @@ nav ul li {
   /* border-radius: 5%; */
   position: relative;
   overflow: hidden;
+  bottom: 0;
   }
   
   .project-link:hover {
@@ -475,6 +479,11 @@ nav ul li {
 .contact {
   background-color: var(--bg-color);
   padding: 1rem 6rem;
+}
+
+.contact-flex-box {
+  display: flex;
+  flex-direction: row !important;
 }
 
 .contact p {
@@ -750,6 +759,10 @@ footer {
     height: 100%;
   }
 
+  .contact-flex-box {
+    flex-direction: column;
+  }
+
   .contact-form-container {
     max-width: 23.75rem;
   }
@@ -770,7 +783,8 @@ footer {
       max-width: 100%;
     }
     .project-container {
-      width: 17.875rem;
+      /* width: 17.875rem; */
+      width: 80%;
     }
 
     .project-pic {
