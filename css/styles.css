@@ -304,7 +304,7 @@ nav ul li {
 .projects {
   background-color: #ffaa72ac;
   margin-top: 6rem;
-  padding: 5rem 5rem;
+  padding: 80px 5%;
   height: fit-content;
   text-align: center;
 }
@@ -338,11 +338,14 @@ nav ul li {
   margin: auto;
   text-align: center;
   margin-top: 2.5rem;
+  justify-content: space-around;
 }
 
 .project-card {
   display: flex;
-  width: 150%;
+  flex-basis: 30%;
+  
+  width: 100%;
   /* height: 100%; */
   position: relative;
   margin-bottom: 2rem;
@@ -352,7 +355,7 @@ nav ul li {
   border-radius: 11px;
   box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 20px;
-  margin: 20px;
+  /* margin: 20px; */
   overflow: hidden;
 }
 
@@ -476,6 +479,10 @@ nav ul li {
   grid-template-columns: 2fr 3fr;
 }
 
+.contact-flex-box > div {
+  flex-basis: 45%;
+}
+
 .contact {
   background-color: var(--bg-color);
   padding: 1rem 6rem;
@@ -483,7 +490,8 @@ nav ul li {
 
 .contact-flex-box {
   display: flex;
-  flex-direction: row !important;
+  flex-direction: row;
+  justify-content: baseline;
 }
 
 .contact p {
@@ -707,8 +715,8 @@ footer {
   .hero img {
     height: 37.5rem;
     width: 30rem;
-    border-radius: 1rem;
-    max-width: 100%;
+    border-radius: 18%;
+    max-width: 90%;
   }
 
   .bio {
@@ -737,14 +745,17 @@ footer {
     max-width: 100%;
   }
 
-  .projects-container {
-    flex-direction: column;
-    width: 50%;
+  .icon-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 10px;
+    margin: 2px;
   }
 
-  .project-container {
-    width: 20.875rem;
-    max-width: 100%;
+  .projects-container {
+    flex-direction: column;
+    width: 90%;
   }
 
   .project-card {
@@ -771,6 +782,7 @@ footer {
     .hero img {
       height: 37.5rem;
       width: 23rem;
+      border-radius: 100%;
     }
 
     .bio {
@@ -778,13 +790,9 @@ footer {
     }
 
     .icon {
-      width: 5.875rem;
-      height: 5.25rem;
+      width: 4.875rem;
+      height: 4.25rem;
       max-width: 100%;
-    }
-    .project-container {
-      /* width: 17.875rem; */
-      width: 80%;
     }
 
     .project-pic {
@@ -792,12 +800,7 @@ footer {
     }
 
     .container {
-      width: 37%;
-    }
-
-    .contact-form-container {
-      width: 50%;
-      margin-left: 20px;
+      width: 100%;
     }
   }
 }
