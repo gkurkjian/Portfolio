@@ -64,7 +64,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 100%
+  width: 100vw;
 }
 div, span, h2, p {
   font-family: var(--font-family);
@@ -75,7 +75,8 @@ p {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 1;
@@ -289,6 +290,7 @@ nav ul li {
 .icon {
   width: 9.875rem;
   height: 9.25rem;
+  object-fit: cover;
 }
 /*Here will give a fade effect to each icon we have*/
 .icon-card {
@@ -363,7 +365,6 @@ nav ul li {
   position: relative; /*This will prevent to overlay and not change the size of the pic*/
   width: 100%;
   height: 150px; 
-  object-fit: cover;
   margin-bottom: 25px;
 }
 
@@ -683,15 +684,26 @@ footer {
 
   nav ul {
     position: fixed;
-    background-color: var(--bg-color);
+    width: 100%;
+    height: 90%;
+    background-color: #2f2626;
+    /* background-color: var(--bg-color); */
     flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
+    bottom: 0;
+    left: 0;
+    /* top: 86px; */
+    /* left: 10%; */
+    /* width: 80%; */
     text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
+    transform: translateX(120%); /* sideways transition is fine tbh */
+    -webkit-transition:  1s cubic-bezier(0.25, 0.25, 0, 1);
+    transition:  1s cubic-bezier(0.25, 0.25, 0, 1);
+    /* transition: transform 0.5s ease-in; */
     z-index: 1;
+  }
+
+  nav ul li:nth-child(1) {
+    padding-top: 32px;
   }
 
   nav ul li {
@@ -713,11 +725,13 @@ footer {
   }
 
   .hero img {
-    height: 37.5rem;
-    width: 30rem;
+    height: 700px;
+    width: 90%;
     border-radius: 18%;
-    max-width: 90%;
-  }
+    /* max-width: 90%; */
+    object-fit: cover;
+    object-position: 90% 50%;  
+}
 
   .bio {
     margin-top: 2rem;
