@@ -12,6 +12,11 @@ scrollUp.addEventListener("click", () => {
   });
 });
 
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
 // Nav hamburgerburger selections
 const burger = document.querySelector("#burger-menu");
 const ul = document.querySelector("nav ul");
